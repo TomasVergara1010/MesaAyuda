@@ -37,7 +37,6 @@ class Mesa_Ayuda:
             print("No hay solicitudes pendientes")
         
         else:
-            print(self.colaPendientes())
             self.colaPendientes.mostrar()
     
     def consultarUltiSoliAtendida(self):
@@ -62,12 +61,12 @@ class Mesa_Ayuda:
             print(" "*10, " Mesas de Ayuda ", " "*10)
             print("-"*40)
             
-            print("1. Registrar una solicitud" "/n"
-                  "2. Atender la siguiente solicitud" "/n"
-                  "3. Consultar solicitudes pendientes" "/n"
-                  "4. Consultar ultima solicitud atendida" "/n"
-                  "5. Consultar cantidad de solicitudes pendientes" "/n"
-                  "6. Salir" "/n")
+            print("1. Registrar una solicitud")
+            print("2. Atender la siguiente solicitud")
+            print("3. Consultar solicitudes pendientes")
+            print("4. Consultar ultima solicitud atendida")
+            print("5. Consultar cantidad de solicitudes pendientes")
+            print("6. Salir")
             
             opcion = int(input("Por favor, seleccione una opción: "))
             
