@@ -56,5 +56,35 @@ class Mesa_Ayuda:
         cantidad = self.colaPendientes.size()
         print(f"Hay {cantidad} solicitudes pendientes")
         
-        
-        
+    def ejecutar(self):
+        while True:
+            print("-"*40)
+            print(" "*10, " Mesas de Ayuda ", " "*10)
+            print("-"*40)
+            
+            print("1. Registrar una solicitud" "/n"
+                  "2. Atender la siguiente solicitud" "/n"
+                  "3. Consultar solicitudes pendientes" "/n"
+                  "4. Consultar ultima solicitud atendida" "/n"
+                  "5. Consultar cantidad de solicitudes pendientes" "/n"
+                  "6. Salir" "/n")
+            
+            opcion = int(input("Por favor, seleccione una opción: "))
+            
+            if opcion == 1:
+                self.registrarSolicitud()
+            elif opcion == 2:
+                self.atenderSigSolicitud()
+            elif opcion == 3:
+                self.consultarSolisPendientes()
+            elif opcion == 4:
+                self.consultarUltiSoliAtendida()
+            elif opcion == 5:
+                self.cantidadSolisPendientes()
+            elif opcion == 6:
+                print("Tenga un feliz dia")
+                break
+            else:
+                print("Error, seleccione una opcion valida")
+            
+            
