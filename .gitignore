@@ -1,1 +1,2 @@
-Modificador no válido: /n*.pyc
+__pycache__/
+*.pyc/n
