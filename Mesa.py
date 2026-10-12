@@ -21,14 +21,15 @@ class Mesa_Ayuda:
     
     def atenderSigSolicitud(self):
         print("--Atender la siguiente solicitud--")
-        
-        if self.colaPendientes.is_empty():
-            print("No hay otra solicitud")
-        
+
         solicitudAtendida = self.colaPendientes.dequeue()
         
-        self.pilaHistorial.push(solicitudAtendida)
-        print(f"Se agrego {solicitudAtendida} al historial")
+        if solicitudAtendida is not None:
+            self.pilaHistorial.push(solicitudAtendida)
+            print(f"Solicitud atendida con éxito: {solicitudAtendida}")
+    
+        else:
+            print("No hay otra solicitud pendiente para atender.")
     
     def consultarSolisPendientes(self):
         print("--Consulta de solicitudes pendientes--")
@@ -37,7 +38,6 @@ class Mesa_Ayuda:
             print("No hay solicitudes pendientes")
         
         else:
-            print(self.colaPendientes())
             self.colaPendientes.mostrar()
     
     def consultarUltiSoliAtendida(self):
@@ -62,12 +62,13 @@ class Mesa_Ayuda:
             print(" "*10, " Mesas de Ayuda ", " "*10)
             print("-"*40)
             
-            print("1. Registrar una solicitud" "/n"
-                  "2. Atender la siguiente solicitud" "/n"
-                  "3. Consultar solicitudes pendientes" "/n"
-                  "4. Consultar ultima solicitud atendida" "/n"
-                  "5. Consultar cantidad de solicitudes pendientes" "/n"
-                  "6. Salir" "/n")
+            print("1. Registrar una solicitud")
+            print("2. Atender la siguiente solicitud")
+            print("3. Consultar solicitudes pendientes")
+            print("4. Consultar ultima solicitud atendida")
+            print("5. Consultar cantidad de solicitudes pendientes")
+            print("6. Salir")
+            print("\n")
             
             opcion = int(input("Por favor, seleccione una opción: "))
             

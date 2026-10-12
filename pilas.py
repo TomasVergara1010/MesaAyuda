@@ -6,19 +6,19 @@ class Pilas:
     def is_empty(self):
         return self.cima is None
 
-    def push(self, dato):
-        nuevo = Node(dato)
-        nuevo.siguiente = self.cima
+    def push(self, data):
+        nuevo = Node(data)
+        nuevo.next = self.cima
         self.cima = nuevo
 
     def pop(self):
         if self.is_empty():
             return None
-        dato = self.cima.dato
-        self.cima = self.cima.siguiente
+        dato = self.cima.data
+        self.cima = self.cima.next
         return dato
 
     def peek(self):
         if self.is_empty():
             return None
-        return self.cima.dato
+        return self.cima.data
