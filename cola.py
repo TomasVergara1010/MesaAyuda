@@ -24,17 +24,6 @@ class Cola:
             self.final = None
         return dato
     
-    def mostrar(self):
-        if self.is_empty():
-            print("No hay solicitudes pendientes")
-            return
-        
-        actual = self.frente
-        print("Solicitudes pendientes: ")
-        while actual is not None:
-            print(actual.dato)
-            actual = actual.siguiente
-
     def size(self):
         contador = 0
         actual = self.frente
