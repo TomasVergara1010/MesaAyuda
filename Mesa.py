@@ -50,5 +50,11 @@ class Mesa_Ayuda:
             ultimaSoli = self.pilaHistorial.peek()
             print(f"La ultima solicitud atendida fue: {ultimaSoli}")
         
-
+    def cantidadSolisPendientes(self):
+        print("--Cantidad de solicitudes pendientes--")
+        
+        cantidad = self.colaPendientes.size()
+        print(f"Hay {cantidad} solicitudes pendientes")
+        
+        
         
